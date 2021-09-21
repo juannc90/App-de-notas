@@ -1,15 +1,15 @@
 [
     {
         "titulo": "Corpo",
-        "estado": "Sin comenzar"
+        "estado": "Sin_comenzar"
     },
     {
         "titulo": "Inglés",
-        "estado": "Sin comenzar"
+        "estado": "Sin_comenzar"
     },
     {
         "titulo": "DH",
-        "estado": "En proceso"
+        "estado": "En_proceso"
     },
     {
         "titulo": "Dormir",
