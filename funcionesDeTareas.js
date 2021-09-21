@@ -14,30 +14,8 @@ const filtrarPorEstdo = function(estado){
     console.log(bd.filter(item => item.estado == estado))
 }
 
-
-let opcion = process.argv[2]
-const verificarOpciones = (opcion)=>{  
-    switch (opcion){
-        case 'listar':
-            console.log(bd)
-            break
-        case undefined:
-            console.log('Atención - Tienes que pasar una opción')
-            break
-        case 'crear':
-            guardarTarea(process.argv[3], 'Pendiente')
-            break
-        case 'filtrar':
-            filtrarPorEstdo(process.argv[3])
-            break
-        default:
-            console.log('No entiendo qué quieres hacer')
-            break        
-    }
-}
-
-module.exports = {guardarTarea, verificarOpciones, filtrarPorEstdo}
+module.exports = {guardarTarea, filtrarPorEstdo}
 
 console.log('OK')
 
-verificarOpciones(opcion)
+
