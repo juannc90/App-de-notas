@@ -14,5 +14,13 @@
     {
         "titulo": "Dormir",
         "estado": "Pendiente"
+    },
+    {
+        "titulo": "Ejercicio",
+        "estado": "Pendiente"
+    },
+    {
+        "titulo": "Aseo",
+        "estado": "Pendiente"
     }
 ]

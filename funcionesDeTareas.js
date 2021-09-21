@@ -10,7 +10,9 @@ const guardarTarea = (titulo, estado)=>{
     fs.writeFileSync('./database/tareas.json', escribirJSON)
 }
 
-// registrarTarea()
+const filtrarPorEstdo = function(estado){
+    console.log(bd.filter(item => item.estado == estado))
+}
 
 
 let opcion = process.argv[2]
@@ -23,7 +25,10 @@ const verificarOpciones = (opcion)=>{
             console.log('Atención - Tienes que pasar una opción')
             break
         case 'crear':
-            guardarTarea('Dormir', 'Pendiente')
+            guardarTarea(process.argv[3], 'Pendiente')
+            break
+        case 'filtrar':
+            filtrarPorEstdo(process.argv[3])
             break
         default:
             console.log('No entiendo qué quieres hacer')
@@ -31,7 +36,7 @@ const verificarOpciones = (opcion)=>{
     }
 }
 
-module.exports = {guardarTarea, verificarOpciones}
+module.exports = {guardarTarea, verificarOpciones, filtrarPorEstdo}
 
 console.log('OK')
 
